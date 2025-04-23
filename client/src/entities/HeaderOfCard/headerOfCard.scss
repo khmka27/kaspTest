@@ -1,0 +1,102 @@
+.card-block {
+  width: 100%;
+  overflow: hidden;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+
+  &__header,
+  &__footer {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__title {
+    font-size: 18px;
+    font-weight: 600;
+    color: #047ee7;
+  }
+
+  // Верхний блок с информацией
+  &__info {
+    display: flex;
+    gap: 24px;
+    color: #666666;
+    font-size: 14px;
+
+    span {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+  }
+
+  // Действия (кнопки и бейдж)
+  &__actions {
+    display: flex;
+    gap: 6px;
+    align-items: center;
+  }
+
+  // Бейдж
+  &__badge {
+    padding: 2px 8px;
+    border-radius: 4px;
+    font-size: 10px;
+    font-weight: 500;
+
+    &--positive {
+      background: #23ffb0;
+      border: 1px solid;
+      color: #000000;
+    }
+  }
+
+  // Иконки
+  &__icon {
+    color: #595959;
+    cursor: pointer;
+    transition: opacity 0.2s;
+
+    &:hover {
+      opacity: 0.8;
+      color: #1890ff;
+    }
+  }
+
+  // Мета-информация в футере
+  &__meta {
+    display: flex;
+    gap: 20px;
+    font-size: 13px;
+    color: #595959;
+
+    &-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+    }
+
+    &-icon {
+      font-size: 14px;
+      color: #8c8c8c;
+    }
+  }
+
+  &__link {
+    color: #1890ff;
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
+  // Флаг
+  &__flag {
+    width: 16px;
+    height: 12px;
+    border-radius: 2px;
+    margin-right: 4px;
+  }
+}
