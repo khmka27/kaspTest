@@ -1,0 +1,25 @@
+.newsText {
+  margin-bottom: 0;
+  padding: 0;
+  line-height: 1.5;
+
+  .keyword {
+    font-weight: bold;
+    background-color: #1890ff;
+    padding: 0 4px;
+    border-radius: 2px;
+    font-weight: 400;
+  }
+}
+
+.showMoreButton {
+  margin: 0;
+  padding: 0 !important;
+  height: auto;
+  line-height: 1;
+  color: #1890ff;
+
+  .triangle {
+    font-size: 0.8em;
+  }
+}
