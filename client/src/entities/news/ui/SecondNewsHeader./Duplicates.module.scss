@@ -1,23 +1,66 @@
-.card-block {
+$border-color: #1890ff;
+$text-gray: #666666;
+$button-border: #4f4c5c;
+
+.wrapper {
+  margin: 6px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.DublicateCount {
+  margin-left: 6px;
+  margin-top: 0;
+  color: $text-gray;
+  font-weight: 400;
+}
+
+.sortToggle {
+  cursor: pointer;
+}
+
+.content {
+  padding: 12px;
+  border: 2px solid $border-color;
+  border-radius: 10px;
+}
+
+.showMoreButton {
+  width: 100%;
+  margin-top: 5px;
+  background: none;
+  color: white;
+  border: 2px solid $button-border;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+.cardBlock {
   width: 100%;
   overflow: hidden;
   font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
 
   &__header,
   &__footer {
-    margin: 0;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   &__title {
+    margin: 6px;
     font-size: 18px;
     font-weight: 600;
     color: #047ee7;
   }
 
-  // Верхний блок с информацией
   &__info {
     display: flex;
     gap: 24px;
@@ -31,14 +74,12 @@
     }
   }
 
-  // Действия (кнопки и бейдж)
   &__actions {
     display: flex;
     gap: 6px;
     align-items: center;
   }
 
-  // Бейдж
   &__badge {
     padding: 2px 8px;
     border-radius: 4px;
@@ -52,7 +93,6 @@
     }
   }
 
-  // Иконки
   &__icon {
     color: #595959;
     cursor: pointer;
@@ -64,7 +104,6 @@
     }
   }
 
-  // Мета-информация в футере
   &__meta {
     display: flex;
     gap: 20px;
@@ -92,7 +131,6 @@
     }
   }
 
-  // Флаг
   &__flag {
     width: 16px;
     height: 12px;
