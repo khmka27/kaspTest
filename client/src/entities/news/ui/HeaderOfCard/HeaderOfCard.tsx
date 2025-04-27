@@ -10,7 +10,7 @@ import { useAppDispatch, useAppSelector } from '../../../../shared/lib/hooks';
 import { fetchNews } from '../../model/newsSlice';
 import styles from './HeaderOfCard.module.scss';
 
-export const HeaderOfCard: React.FC = () => {
+export default function HeaderOfCard(): React.JSX.Element {
   const dispatch = useAppDispatch();
   const news = useAppSelector((state) => state.news.data);
 
@@ -108,4 +108,4 @@ export const HeaderOfCard: React.FC = () => {
       </div>
     </div>
   );
-};
+}

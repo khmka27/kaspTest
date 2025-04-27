@@ -7,7 +7,6 @@ export default function NewsText(): React.JSX.Element {
   const text = useAppSelector((store) => store.news.data?.HIGHLIGHTS);
   const [showAll, setShowAll] = useState(false);
 
-  // Выбираем случайный индекс только при первом рендере
   const randomIndex = Math.floor(Math.random() * (text?.length || 1));
 
   const parseTextWithKW = (text: string) => {
@@ -32,7 +31,6 @@ export default function NewsText(): React.JSX.Element {
 
   return (
     <div className={styles.container}>
-      {/* Отображаем либо случайный элемент, либо все элементы */}
       {showAll ? (
         text.map((item, index) => (
           <p key={index} className={styles.newsText}>
@@ -43,7 +41,6 @@ export default function NewsText(): React.JSX.Element {
         <p className={styles.newsText}>{parseTextWithKW(text[randomIndex])}</p>
       )}
 
-      {/* Кнопка для переключения режима */}
       <Button
         className={styles.showMoreButton}
         type="link"

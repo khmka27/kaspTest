@@ -2,8 +2,7 @@
 
 ---
 
-![Project Screenshot](./image.png)
-
+![Project Screenshot](image.png)
 ---
 
 ## 📖 Описание

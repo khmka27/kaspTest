@@ -52,11 +52,7 @@ export default function Duplicates(): React.JSX.Element {
               <CheckSquareOutlined className={styles.cardBlock__icon} />
             </div>
           </div>
-
-          {/* Заголовок */}
           <h3 className={styles.cardBlock__title}>{news.TI || 'No title'}</h3>
-
-          {/* Футер */}
           <div className={styles.cardBlock__footer}>
             <div className={styles.cardBlock__meta}>
               <span className={styles.cardBlock__metaItem}>
@@ -87,7 +83,7 @@ export default function Duplicates(): React.JSX.Element {
       </div>
       <Button className={styles.showMoreButton}>
         <DownOutlined />
-        Show More
+        View Duplicates
       </Button>
     </div>
   );
