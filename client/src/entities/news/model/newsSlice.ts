@@ -20,8 +20,6 @@ export const fetchNews = createAsyncThunk(
       const response = await fetch('/mock.json');
       if (!response.ok) throw new Error('Ошибка загрузки');
       const data = await response.json();
-
-      // Если API возвращает массив, берем первый элемент
       return Array.isArray(data) ? data[0] : (data as IData_SnippetNews);
     } catch (error) {
       return rejectWithValue(

@@ -1,0 +1,43 @@
+$border-color: #1890ff;
+$text-gray: #666666;
+$button-border: #4f4c5c;
+
+.wrapper {
+  margin: 6px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-right: 8px;
+  font-size: 12px;
+}
+
+.DublicateCount {
+  margin-left: 6px;
+  margin-top: 0;
+  color: $text-gray;
+  font-weight: 400;
+}
+
+.sortToggle {
+  cursor: pointer;
+}
+
+.content {
+  padding: 12px;
+  border: 2px solid $border-color;
+  border-radius: 10px;
+}
+
+.ViewDuplicatesButton {
+  width: 100%;
+  margin-top: 10px;
+  background: none;
+  color: white;
+  border: 2px solid $button-border;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, sans-serif;
+}
