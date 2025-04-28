@@ -4,10 +4,12 @@ import { Button } from 'antd';
 import styles from './NewsText.module.scss';
 
 export default function NewsText(): React.JSX.Element {
-  const text = useAppSelector((store) => store.news.data?.HIGHLIGHTS);
+  const text = useAppSelector((store) => store.news.data);
   const [showAll, setShowAll] = useState(false);
 
-  const randomIndex = Math.floor(Math.random() * (text?.length || 1));
+  const randomIndex = Math.floor(
+    Math.random() * (text?.HIGHLIGHTS.length || 1)
+  );
 
   const parseTextWithKW = (text: string) => {
     const parts = text.split(/(<kw>|<\/kw>)/g);
@@ -25,20 +27,18 @@ export default function NewsText(): React.JSX.Element {
     });
   };
 
-  if (!text || text.length === 0) {
+  if (!text || text.HIGHLIGHTS.length === 0) {
     return <div>Loading news...</div>;
   }
 
   return (
     <div className={styles.container}>
       {showAll ? (
-        text.map((item, index) => (
-          <p key={index} className={styles.newsText}>
-            {parseTextWithKW(item)}
-          </p>
-        ))
+        <p className={styles.newsText}>{text.AB}</p>
       ) : (
-        <p className={styles.newsText}>{parseTextWithKW(text[randomIndex])}</p>
+        <p className={styles.newsText}>
+          {parseTextWithKW(text.HIGHLIGHTS[randomIndex])}
+        </p>
       )}
 
       <Button
