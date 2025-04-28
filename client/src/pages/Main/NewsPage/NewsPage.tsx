@@ -1,7 +1,11 @@
 import React from 'react';
-import './NewsPage.module.scss';
+import styles from './NewsPage.module.scss';
 import NewsCard from '../../../features/newsCard/NewsCard';
 
 export default function NewsPage(): React.JSX.Element {
-  return <NewsCard />;
+  return (
+    <div className={styles.container}>
+      <NewsCard />
+    </div>
+  );
 }
