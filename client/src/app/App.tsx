@@ -6,7 +6,7 @@ import { store } from './store';
 
 export default function App(): React.JSX.Element {
   return (
-    <BrowserRouter>
+    <BrowserRouter basename="/kaspTest">
       <Provider store={store}>
         <Routes>
           <Route path="/" element={<NewsPage />}></Route>
