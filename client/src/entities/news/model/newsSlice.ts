@@ -17,7 +17,7 @@ export const fetchNews = createAsyncThunk(
   'news/fetchNews',
   async (_, { rejectWithValue }) => {
     try {
-      const response = await fetch('/mock.json');
+      const response = await fetch(`${import.meta.env.BASE_URL}mock.json`);
       if (!response.ok) throw new Error('Ошибка загрузки');
       const data = await response.json();
       return Array.isArray(data) ? data[0] : (data as IData_SnippetNews);
